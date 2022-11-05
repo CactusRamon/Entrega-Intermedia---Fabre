@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{% endblock contenidoQueCambia %}
+<ul>
+    {% for cafe in lista_cafes %}
+        <li> Nombre: {{cafe.nombre}} - Origen: {{cafe.origen}} - Tueste: {{cafe.tueste}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock contenidoQueCambia %}
