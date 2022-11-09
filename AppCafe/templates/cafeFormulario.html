@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'CafeFormulario' %}" method="POST">{% csrf_token %}
+
+    <p>Nombre:   <input type="text" name="nombre"/> </p>
+    <p>Origen: <input type="text" name="origen"/> </p>
+    <p>Tueste: <input type="text" name="tueste"/> </p>
+    <input type="submit" value="Enviar"/>
+</form>
+
+{% endblock contenidoQueCambia %}

@@ -4,8 +4,10 @@
 
 {% block contenidoQueCambia %}
 
-{% for cafetera in lista_cafeteras %}
-<li> Metodo: {{cafetera.metodo}} - Nombre: {{cafetera.nombre}}</li>
-{% endfor %}
+<ul>
+    {% for cafetera in lista_cafeteras %}
+        <li> Metodo: {{cafetera.metodo}} - Nombre: {{cafetera.nombre}}</li>
+    {% endfor %}
+</ul>
 
 {% endblock contenidoQueCambia %}

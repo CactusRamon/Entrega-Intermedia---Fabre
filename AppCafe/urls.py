@@ -1,5 +1,5 @@
 from django.urls import path
-from AppCafe.views import cafes, cafeteras, cafe, cafetera, lista_cafe, lista_cafetera, home, herramienta, herramientas, lista_herramienta
+from AppCafe.views import cafes, cafeteras, cafe, cafetera, lista_cafe, lista_cafetera, home, herramienta, herramientas, lista_herramienta, cafeFormulario
 
 urlpatterns = [
     path('agrega-cafe/<nombre>/<origen>/<tueste>', cafe),
@@ -12,4 +12,5 @@ urlpatterns = [
     path('cafes/', cafes, name="Cafes"),
     path('cafeteras/', cafeteras, name="Cafeteras"),
     path('herramientas/', herramientas, name="Herramientas"),
+    path('cafeFormulario', cafeFormulario, name="CafeFormulario")
 ]

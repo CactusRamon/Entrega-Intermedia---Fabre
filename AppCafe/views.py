@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Cafe, Cafetera, Herramienta
 
@@ -51,3 +51,16 @@ def cafeteras(request):
 def herramientas(request):
      lista = Herramienta.objects.all()
      return render(request, "herramientas.html", {"lista_herramientas": lista})
+
+def cafeFormulario(request):
+    print("method: ", request.method)
+    print("post: ", request.POST)
+
+    if request.method == 'POST':
+
+        cafe = Cafe(nombre=request.POST['nombre'], origen=request.POST['origen'], tueste=request.POST['tueste'])
+        cafe.save()
+
+        return redirect('Cafes')
+    else:
+        return render(request, "cafeFormulario.html")
