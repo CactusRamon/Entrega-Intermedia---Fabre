@@ -1,0 +1,12 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <form action="{% url 'HerramientaFormulario' %}" method="POST">{% csrf_token %}
+        <p>Ingrese el nombre de la herramienta <input type="text" name="herramienta"/> </p>
+        <input type="submit" value="Buscar herramienta">
+    </form>
+
+{% endblock contenidoQueCambia %}

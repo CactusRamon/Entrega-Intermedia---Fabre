@@ -16,4 +16,3 @@ class Cafetera(models.Model):
 class Herramienta(models.Model):
 
     nombre = models.CharField(max_length=50)
-    
